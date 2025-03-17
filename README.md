@@ -1,4 +1,4 @@
-# Branches Management System (BM_Web & API)
+# Branches Management System
 
 ## Overview
 Branches Management System is a web application for managing multiple branches, employees, and maintenance requests. It provides authentication, role-based access control, and pagination features.
