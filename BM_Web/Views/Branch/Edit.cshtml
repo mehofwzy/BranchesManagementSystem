@@ -1,0 +1,24 @@
+﻿@model BM_Web.Models.Branch
+
+@{
+    ViewData["Title"] = "Edit Branch";
+}
+
+<h2>Edit Branch</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label class="form-label">Branch Name</label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input asp-for="Location" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-warning">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,33 @@
+﻿@model List<BM_Web.Models.MaintenanceRequest>
+
+@{
+    ViewData["Title"] = "Maintenance Requests";
+}
+
+<h2>Maintenance Requests</h2>
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Branch</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.Description</td>
+                <td>@request.Status</td>
+                <td>@request.BranchName</td>
+                <td style="text-align:center">
+                    <a asp-action="Edit" asp-route-id="@request.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@request.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

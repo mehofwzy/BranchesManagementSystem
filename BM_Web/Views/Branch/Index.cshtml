@@ -1,0 +1,31 @@
+﻿@model List<BM_Web.Models.Branch>
+
+@{
+    ViewData["Title"] = "Branches";
+}
+
+<h2>Branches</h2>
+<a asp-action="Create" class="btn btn-primary">Add New Branch</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var branch in Model)
+        {
+            <tr>
+                <td>@branch.Name</td>
+                <td>@branch.Location</td>
+                <td style="text-align:center">
+                    <a asp-action="Edit" asp-route-id="@branch.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@branch.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
