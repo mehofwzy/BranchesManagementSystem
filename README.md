@@ -31,7 +31,7 @@ Branches Management System is a web application for managing multiple branches, 
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-username/Branches-Management-System.git
+git clone https://github.com/mehofwzy/BranchesManagementSystem.git
 cd Branches-Management-System
 ```
 
